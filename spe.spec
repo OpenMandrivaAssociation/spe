@@ -52,7 +52,6 @@ EOF
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop << EOF
 [Desktop Entry]
-Encoding=UTF-8
 Name=SPE
 Comment=Stani's Python Editor
 Exec=%{_bindir}/%{name}
