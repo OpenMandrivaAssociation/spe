@@ -12,6 +12,7 @@ Source0: http://download.berlios.de/python/%{tname}-%{tversion}.tar.bz2
 License: GPL
 Group: Editors
 Url: http://pythonide.stani.be 
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: python-devel
 BuildRequires: ImageMagick
 Requires: wxPython >= 2.6.1.0
