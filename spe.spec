@@ -32,22 +32,12 @@ context help, Blender support,
 rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT
 
-mkdir -p %{buildroot}{%{_miconsdir},%{_iconsdir},%{_liconsdir},%{_menudir}}
 %define logo build/lib/_%{name}/images/%{name}.png
 %define iconname %{name}.png
 convert %logo -geometry 48x48 %{buildroot}%{_liconsdir}/%{iconname}
 convert %logo -geometry 32x32 %{buildroot}%{_iconsdir}/%{iconname}
 convert %logo  -geometry 16x16 %{buildroot}%{_miconsdir}/%{iconname} 
 
-cat <<EOF > $RPM_BUILD_ROOT%{_menudir}/%{name}
-?package(%{name}): needs="X11" \
-section="More Applications/Editors" \
-title="SPE" \
-longtitle="Stani's Python Editor" \
-command="%{name}" \
-icon="%{iconname}" \
-xdg="true"
-EOF
 
 mkdir -p $RPM_BUILD_ROOT%{_datadir}/applications
 cat > $RPM_BUILD_ROOT%{_datadir}/applications/%{name}.desktop << EOF
@@ -77,7 +67,6 @@ rm -rf $RPM_BUILD_ROOT
 %{py_puresitedir}/_%{name}/*
 %{py_puresitedir}/*.egg-info
 %{_bindir}/%{name}*
-%{_menudir}/%{name}
 %{_datadir}/applications/%{name}.desktop
 %{_miconsdir}/%{iconname}
 %{_iconsdir}/%{iconname}
