@@ -2,7 +2,7 @@
 %define tname SPE
 %define version 0.8.2.a_wx2.6.1.0
 %define tversion 0.8.2.a-wx2.6.1.0
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Stani's Python Editor 
 Name: %{name}
