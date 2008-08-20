@@ -4,7 +4,7 @@ Version:	0.8.4.h
 Release:	%{mkrel 1}
 Source0:	http://download.berlios.de/python/%{name}-%{version}-wx2.6.1.0.tar.gz
 License:	GPLv2+
-Group:		Editors
+Group:		Development/Python
 URL:		http://pythonide.stani.be 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python-devel
