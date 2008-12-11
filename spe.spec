@@ -8,7 +8,7 @@ Group:		Development/Python
 URL:		http://pythonide.stani.be 
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	python-devel
-BuildRequires:	ImageMagick
+BuildRequires:	imagemagick
 Requires:	wxPython >= 2.6.1.0
 Requires:	pychecker
 
