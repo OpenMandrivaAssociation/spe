@@ -1,7 +1,7 @@
 Summary:	A Python-based IDE 
 Name:		spe
 Version:	0.8.4.h
-Release:	%{mkrel 2}
+Release:	%{mkrel 3}
 Source0:	http://download.berlios.de/python/%{name}-%{version}-wx2.6.1.0.tar.gz
 License:	GPLv2+
 Group:		Development/Python
