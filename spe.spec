@@ -66,3 +66,69 @@ rm -rf %{buildroot}
 %{_datadir}/applications/mandriva-%{name}.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.png
 
+
+
+%changelog
+* Sun Sep 20 2009 Thierry Vignaud <tv@mandriva.org> 0.8.4.h-3mdv2010.0
++ Revision: 445202
+- rebuild
+
+* Sat Dec 27 2008 Adam Williamson <awilliamson@mandriva.org> 0.8.4.h-2mdv2009.1
++ Revision: 319721
+- rebuild with python 2.6
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - lowercase ImageMagick
+
+* Wed Aug 20 2008 Adam Williamson <awilliamson@mandriva.org> 0.8.4.h-1mdv2009.0
++ Revision: 274406
+- correct group
+- clean file list
+- correct .desktop file name, summary, icon name, categories
+- fd.o icons
+- use --optimize=2 to get .pyo files
+- use %%{buildroot} not $RPM_BUILD_ROOT
+- requires pychecker
+- new license policy
+- wx2.6.1.0 is not part of the version just indicates requires wx version
+- upstream stopped using SPE in tarball name so no need for that define
+- new release 0.8.4.h
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - rebuild
+    - drop old menu
+
+  + Pixel <pixel@mandriva.com>
+    - rpm filetriggers deprecates update_menus/update_scrollkeeper/update_mime_database/update_icon_cache/update_desktop_database/post_install_gconf_schemas
+
+* Wed Jan 02 2008 Olivier Blin <oblin@mandriva.com> 0.8.2.a_wx2.6.1.0-2mdv2008.1
++ Revision: 140850
+- restore BuildRoot
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - kill re-definition of %%buildroot on Pixel's request
+    - kill desktop-file-validate's 'warning: key "Encoding" in group "Desktop Entry" is deprecated'
+
+
+* Tue Dec 05 2006 Nicolas LÃ©cureuil <neoclust@mandriva.org> 0.8.2.a_wx2.6.1.0-2mdv2007.0
++ Revision: 91333
+- Rebuild against new python
+- import spe-0.8.2.a_wx2.6.1.0-1mdv2007.0
+
+* Sat Aug 26 2006 Stew Benedict <sbenedict@mandriva.com> 0.8.2.a_wx2.6.1.0-1mdv2007.0
+- 0.8.2.a-wx2.6.1.0, xdg menu
+
+* Tue Dec 20 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.8.1.b_wx2.6.1.0_bl2.35-2mdk
+- Fix BuildRequires
+
+* Fri Dec 16 2005 Stew Benedict <sbenedict@mandriva.com> 0.8.1.b_wx2.6.1.0_bl2.35-1mdk
+- 0.8.1.b-wx2.6.1.0.-bl2.35
+
+* Fri Oct 21 2005 Nicolas Lécureuil <neoclust@mandriva.org> 0.7.5.c_wx2.6.1.0_bl2.35-2mdk
+- Fix BuildRequires
+- %%{1}mdv2007.1
+
+* Thu Sep 29 2005 Stew Benedict <sbenedict@mandriva.com> 0.7.5.c_wx2.6.1.0_bl2.35-1mdk
+- first Mandriva release
+
