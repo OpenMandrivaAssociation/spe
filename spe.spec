@@ -3,7 +3,7 @@
 Summary:	A Python-based IDE 
 Name:		spe
 Version:	0.8.4.h
-Release:	4
+Release:	5
 Source0:	http://download.berlios.de/python/%{name}-%{version}-wx2.6.1.0.tar.gz
 License:	GPLv2+
 Group:		Development/Python
@@ -27,6 +27,8 @@ context help and Blender support.
 
 %install
 python setup.py install --root=%{buildroot} --compile --optimize=2
+mkdir -p %{buildroot}%{py_puresitedir}/_%{name}/plugins/pychecker2
+install -m 644 _%{name}/plugins/pychecker2/* %{buildroot}%{py_puresitedir}/_%{name}/plugins/pychecker2/
 
 mkdir -p %{buildroot}%{_iconsdir}/hicolor/{48x48,32x32,16x16}/apps
 convert build/lib/_spe/images/spe.png -scale 48x48 %{buildroot}%{_iconsdir}/hicolor/48x48/apps/%{name}.png
