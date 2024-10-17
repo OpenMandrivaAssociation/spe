@@ -7,7 +7,7 @@ Release:	6
 Source0:	http://download.berlios.de/python/%{name}-%{version}-wx2.6.1.0.tar.gz
 License:	GPLv2+
 Group:		Development/Python
-URL:		http://pythonide.stani.be 
+URL:		https://pythonide.stani.be 
 BuildRequires:	python-devel
 BuildRequires:	imagemagick
 Requires:	wxPython >= 2.6.1.0
